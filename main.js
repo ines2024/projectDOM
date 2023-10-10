@@ -9,8 +9,8 @@ console.log(price);
 var total=document.querySelector("#total-price")
 console.log(total-price);
 var heart=document.querySelectorAll(".material-symbols-outlined")
-
-
+var del=document.querySelectorAll("#supprimer")
+var card=document.querySelectorAll(".card")
 function totalPrice (){
 var result=0
 for (let i = 0; i < price.length; i++) {
@@ -50,4 +50,13 @@ for (let i = 0; i< heart.length; i++) {
         }
     })
     
+}
+for (let i=0; i< del.length;i++) {
+    del[i].addEventListener("click",function del(){
+        card [i].remove()
+        quantity[i].innerHTML=0
+        return totalPrice()
+
+
+    })
 }
